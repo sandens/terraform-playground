@@ -1,5 +1,8 @@
 
-resource "random_uuid" "test" {}
+resource "random_string" "random" {
+  length           = 10
+  special          = false
+}
 
 resource "azurerm_resource_group" "storage_rg" {
  location = var.location
@@ -8,7 +11,7 @@ resource "azurerm_resource_group" "storage_rg" {
 
 resource "azurerm_storage_account" "storage_acct" {
     location = azurerm_resource_group.storage_rg.location
-    name = "${var.storage_acct_name}${random_uuid.test.result}" 
+    name = "${var.storage_acct_name}${random_string.random.result}" 
     account_tier = "Standard"
     account_replication_type = "LRS"
     resource_group_name=azurerm_resource_group.storage_rg.name
