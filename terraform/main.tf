@@ -4,6 +4,7 @@ resource "random_string" "random" {
   length           = 10
   special          = false
   lower = true
+  upper = false
 }
 
 resource "azurerm_resource_group" "storage_rg" {
