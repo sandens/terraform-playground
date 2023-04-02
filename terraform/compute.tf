@@ -74,7 +74,7 @@ resource "azurerm_image" "bosh" {
   os_disk {
     os_type  = "Linux"
     os_state = "Generalized"
-    blob_uri = "https://staccountgl0q0z44yo.blob.core.windows.net/images/ops-manager-3.0.6-build.269.vhd"
+    blob_uri = "https://staccountgl0q0z44yo.blob.core.windows.net/images/opsman-image-3.0.6.vhd"
     size_gb  = 30
   }
 }
