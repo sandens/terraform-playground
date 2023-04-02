@@ -17,7 +17,7 @@ resource "azurerm_network_interface" "opsmgr" {
    ip_configuration {
     name                          = "ipconfig-opsmgr-vm"
     subnet_id                     =  azurerm_subnet.spoke["management"].id
-    private_ip_address_allocation = "Static"
+    private_ip_address_allocation = "Dynamic"
   } 
    depends_on = [
      azurerm_subnet.spoke
