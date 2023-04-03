@@ -1,7 +1,7 @@
 
 
 resource "azurerm_storage_account" "bosh" {
-  name                      = "stboshstorageeus2"
+  name                      = "stnpiplatopsomstoreus2"
   resource_group_name       = azurerm_resource_group.storage_rg.name
   location                  = azurerm_resource_group.storage_rg.location
   account_tier              = var.storage_account_tier
