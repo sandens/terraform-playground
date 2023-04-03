@@ -3,7 +3,11 @@ resource_grp_name = "rg-testing-tf-functions"
 storage_acct_name = "staccount"
 team_name = "devops"
 vm_username = "ubuntu"
+vm_password = "Lincoln2000!"
 vnet_cidr = "10.80.112.0/22"
+
+tas_storage_account_prefix="sttasdeployments"
+opsmanager_vhd_uri = "https://opsmanagereastus.blob.core.windows.net/images/ops-manager-3.0.6-build.269.vhd"
 
 platform_subnets =[
     {
